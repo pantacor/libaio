@@ -13,6 +13,7 @@ LOCAL_AUTOTOOLS_MAKE_INSTALL_ARGS := lib=lib
 
 define LOCAL_AUTOTOOLS_CMD_CONFIGURE
 	cp -r $(PRIVATE_PATH)/*  $(call module-get-build-dir,libaio)/obj
+	rm -f $(call module-get-build-dir,libaio)/obj/atom.mk
 endef
 
 include $(BUILD_AUTOTOOLS)
